@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #d7d7d7;
+}
+
+.header p{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.name_header {
+    display: grid;
+    align-items: center;
+}
+
+.back {
+    padding: 5px 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.back a{
+    color: black;
+    text-decoration: none;
+}
+
+.hero_container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(91px,293px));
+    grid-template-areas: "Foto information information";
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.information {
+    grid-area: information;
+}
+
+.photo_porfile_container {
+    padding-bottom: 50%;
+    width: 50%;
+    position: relative;
+}
+
+.photo_porfile {
+    grid-area: Foto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo_porfile img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name_user_actions {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.name_user_actions button {
+    padding: 5px;
+    margin-right: 10px;
+    height: 28px;
+    border-radius: 5px;
+    color: black;
+    background: none;
+    border: 1px solid #e6e6e6;
+}
+
+.about_me a {
+    margin: 10px 0;
+}
+
+.about_me p {
+    margin-bottom: 5px 0;
+    padding: 0;
+}
+
+.following_too
+{
+    margin: 10px 0;
+}
+
+.following_too a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.following_too a:last-child {
+    color: #b5b5b5;
+}
+
+.name_user_actions h1{
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.relevancia a {
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+}
+
+.button-seguir {
+    background-image: url("https://toppng.com/uploads/preview/user-font-awesome-nuevo-usuario-icono-11563566658mjtfvilgcs.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100%;
+    width: 78px;
+}
+
+
+.name_user_actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Barlow', sans-serif;
+}
+
+.name_user_actions .mas-acciones {
+    font-weight: bold;
+    border: none;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px,293px));
+    justify-content: center;
+    gap: 28px;
+}
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.post:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+.post_image {
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.post_image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay{
+    display: flex;
+}
+
+.post-likes,
+.post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px)
+{
+    .post-list{
+        gap: 3px;
+    }
+    .name_user_actions {
+        display: block;
+    }
+}
