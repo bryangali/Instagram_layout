@@ -218,4 +218,11 @@ body {
     .name_user_actions {
         display: block;
     }
+    .botones .button-mensaje {
+        display: none;
+    }
+
+    .relevancia {
+        display: none;
+    }
 }
